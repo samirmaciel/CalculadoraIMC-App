@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.meupesohoje.modules.homeScreen.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:exitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            android:id="@+id/action_homeFragment_to_registerFragment"
+            app:destination="@id/registerFragment"/>
+        <action
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:exitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            android:id="@+id/action_homeFragment_to_historyWeigthFragment"
+            app:destination="@id/historyWeigthFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        tools:layout="@layout/fragment_register"
+        android:name="com.example.meupesohoje.modules.registerScreen.RegisterFragment"
+        android:label="RegisterFragment" />
+    <fragment
+        tools:layout="@layout/fragment_historyweigth"
+        android:id="@+id/historyWeigthFragment"
+        android:name="com.example.meupesohoje.modules.historyScreen.HistoryWeigthFragment"
+        android:label="HistoryWeigthFragment" />
+</navigation>
