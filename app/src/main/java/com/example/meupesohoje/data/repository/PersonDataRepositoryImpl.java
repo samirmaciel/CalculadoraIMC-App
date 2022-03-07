@@ -27,8 +27,6 @@ public class PersonDataRepositoryImpl implements PersonDataRepository {
 
     @Override
     public void insertPersonData(PersonDataEntity personData) {
-
-        Log.d("MeuPesoHoje", "RegisterViewModel: " + personData.date);
         dao.insertPersonData(personData);
     }
 
@@ -36,4 +34,10 @@ public class PersonDataRepositoryImpl implements PersonDataRepository {
     public void deletePersonData(PersonDataEntity personData) {
         dao.deletePersonData(personData);
     }
+
+    @Override
+    public void cleanDatabase() {
+        dao.deleteAll();
+    }
+
 }

@@ -10,8 +10,6 @@ import java.time.LocalDate;
 @Entity(tableName = "person_data")
 public class PersonDataEntity {
 
-
-
     @PrimaryKey(autoGenerate = true)
     public Integer id;
 

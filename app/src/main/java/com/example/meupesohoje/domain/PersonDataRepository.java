@@ -14,4 +14,6 @@ public interface PersonDataRepository {
     void insertPersonData(PersonDataEntity personData);
 
     void deletePersonData(PersonDataEntity personData);
+
+    void cleanDatabase();
 }

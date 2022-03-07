@@ -68,9 +68,6 @@ public class HistoryWeigthFragment extends Fragment {
             }
         });
 
-//        mRecyclerAdapter.setItemList(getMockListPersonData());
-//        mRecyclerAdapter.notifyDataSetChanged();
-
         mDataBinding.btnArrowBackHistory.setOnClickListener((View v) -> {
             Navigation.findNavController(v).navigateUp();
         });

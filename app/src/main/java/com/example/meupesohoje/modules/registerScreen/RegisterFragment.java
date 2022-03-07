@@ -28,7 +28,6 @@ import java.util.List;
 public class RegisterFragment extends Fragment {
 
     FragmentRegisterBinding mDataBinding;
-
     private RegisterViewModel viewModel;
 
     @Nullable

@@ -26,4 +26,7 @@ public interface PersonDataDao {
 
     @Delete
     public void deletePersonData(PersonDataEntity personData);
+
+    @Query("DELETE FROM person_data")
+    public void deleteAll();
 }

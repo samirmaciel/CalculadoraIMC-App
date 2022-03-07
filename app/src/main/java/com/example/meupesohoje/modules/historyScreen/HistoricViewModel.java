@@ -18,6 +18,7 @@ public class HistoricViewModel extends ViewModel {
     public MutableLiveData<List<PersonDataEntity>> workList = new MutableLiveData<>();
 
     public HistoricViewModel(PersonDataRepository repository){
+
         this.repository = repository;
     }
 
@@ -25,6 +26,10 @@ public class HistoricViewModel extends ViewModel {
         repository.getAllPersonData().subscribe(personDataEntities -> {
            workList.postValue(personDataEntities);
         });
+    }
+
+    public void cleanDataBase(){
+        repository.cleanDatabase();
     }
 
 
