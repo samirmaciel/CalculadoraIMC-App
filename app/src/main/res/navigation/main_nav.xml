@@ -31,8 +31,8 @@
         android:name="com.example.meupesohoje.modules.registerScreen.RegisterFragment"
         android:label="RegisterFragment" />
     <fragment
-        tools:layout="@layout/fragment_historyweigth"
+        tools:layout="@layout/fragment_historicweigth"
         android:id="@+id/historyWeigthFragment"
-        android:name="com.example.meupesohoje.modules.historyScreen.HistoryWeigthFragment"
+        android:name="com.example.meupesohoje.modules.historicScreen.HistoricWeigthFragment"
         android:label="HistoryWeigthFragment" />
 </navigation>

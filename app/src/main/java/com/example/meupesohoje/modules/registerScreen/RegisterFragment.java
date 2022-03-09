@@ -23,6 +23,7 @@ import com.example.meupesohoje.util.WeigthTextWatcher;
 import com.example.meupesohoje.R;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class RegisterFragment extends Fragment {
@@ -50,10 +51,12 @@ public class RegisterFragment extends Fragment {
     public void onResume() {
         super.onResume();
 
-
-        viewModel.insertPersonData(new PersonDataEntity( 72, LocalDate.now().toString()));
-
         mDataBinding.edtWeigth.addTextChangedListener(new WeigthTextWatcher(mDataBinding.edtWeigth));
+
+        mDataBinding.btnRegister.setOnClickListener((View v) -> {
+            viewModel.insertPersonData(new PersonDataEntity(Integer.valueOf(mDataBinding.edtWeigth.getText().toString().replace("kg", "")), LocalDateTime.now().toString()));
+            Navigation.findNavController(v).navigateUp();
+        });
 
         mDataBinding.btnArrowBackRegister.setOnClickListener((View v) -> {
             Navigation.findNavController(v).navigateUp();

@@ -28,12 +28,6 @@ public class RegisterViewModel extends ViewModel {
         repository.insertPersonData(personData);
     }
 
-    public void getAllPersonData(){
-        repository.getAllPersonData().subscribe( personList -> {
-           worList.postValue(personList);
-        });
-    }
-
     static class RegisterViewModelFacotry implements ViewModelProvider.Factory {
 
         private PersonDataRepository repository;

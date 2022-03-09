@@ -18,7 +18,7 @@ import io.reactivex.rxjava3.core.Single;
 @Dao
 public interface PersonDataDao {
 
-    @Query("SELECT * FROM person_data")
+    @Query("SELECT * FROM person_data ORDER BY date DESC")
     public Single<List<PersonDataEntity>> getAllPersonData();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

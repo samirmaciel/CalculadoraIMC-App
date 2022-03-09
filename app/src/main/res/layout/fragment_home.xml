@@ -92,7 +92,7 @@
             android:textColor="@color/orange"
             android:layout_marginBottom="16dp"
             android:layout_marginHorizontal="16dp"
-            android:text="Começar"/>
+            android:text="@string/title_btn_myhistoric"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnStart"
@@ -106,7 +106,7 @@
             android:textColor="@color/orange"
             android:layout_marginBottom="16dp"
             android:layout_marginHorizontal="16dp"
-            android:text="Registrar peso"/>
+            android:text="@string/title_btn_registerweigth"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

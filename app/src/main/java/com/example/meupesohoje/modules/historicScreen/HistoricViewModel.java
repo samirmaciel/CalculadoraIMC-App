@@ -1,6 +1,4 @@
-package com.example.meupesohoje.modules.historyScreen;
-
-import android.mtp.MtpConstants;
+package com.example.meupesohoje.modules.historicScreen;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
@@ -16,7 +14,7 @@ public class HistoricViewModel extends ViewModel {
 
     private PersonDataRepository repository;
     public MutableLiveData<List<PersonDataEntity>> workList = new MutableLiveData<>();
-
+    public MutableLiveData<PersonDataEntity> lastPersonData = new MutableLiveData<>();
     public HistoricViewModel(PersonDataRepository repository){
 
         this.repository = repository;
@@ -24,12 +22,18 @@ public class HistoricViewModel extends ViewModel {
 
     public void getAllPersonData(){
         repository.getAllPersonData().subscribe(personDataEntities -> {
-           workList.postValue(personDataEntities);
+            lastPersonData.postValue(getLastWeigth(personDataEntities));
+            workList.postValue(personDataEntities);
         });
     }
 
-    public void cleanDataBase(){
-        repository.cleanDatabase();
+    public void deletePersonData(PersonDataEntity personDataEntity){
+        repository.deletePersonData(personDataEntity);
+    }
+
+    private PersonDataEntity getLastWeigth(List<PersonDataEntity> list){
+        return list.get(0);
+
     }
 
 

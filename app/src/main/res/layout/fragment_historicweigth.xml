@@ -40,15 +40,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/tvLastWeigth"
-                android:padding="16dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/orange"
-                android:layout_marginTop="0dp"
-                style="@style/h1_text"
-                android:text="65kg 22/01/22"/>
+<!--            <TextView-->
+<!--                android:id="@+id/tvLastWeigth"-->
+<!--                android:padding="16dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/orange"-->
+<!--                android:layout_marginTop="0dp"-->
+<!--                style="@style/h1_text"-->
+<!--                android:text="65kg 22/01/22"/>-->
         </com.google.android.material.card.MaterialCardView>
 
         <TextView

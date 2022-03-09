@@ -2,7 +2,9 @@
     <string name="app_name">MeuPesoHoje</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    
+    <string name="title_btn_myhistoric">Meu Histórico</string>
+    <string name="title_btn_registerweigth">Registrar peso</string>
+
     <string-array name="motivational_phrases">
         <item>Coloque seu corpo em movimento, e supere seus próprios limites.</item>
         <item>Tudo é possivel desde que você dedique seu corpo, seu tempo e sua mente.</item>

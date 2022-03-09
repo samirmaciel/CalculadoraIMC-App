@@ -35,9 +35,5 @@ public class PersonDataRepositoryImpl implements PersonDataRepository {
         dao.deletePersonData(personData);
     }
 
-    @Override
-    public void cleanDatabase() {
-        dao.deleteAll();
-    }
 
 }
